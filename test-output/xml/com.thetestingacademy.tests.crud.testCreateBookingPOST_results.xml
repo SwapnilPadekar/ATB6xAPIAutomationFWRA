@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="D:/TTA_WorkSpace/ATB6xAPIAutomationFWRA"
-           tests="1"
+           tests="2"
            failures="0"
            errors="0"
            skipped="0"
-           time="3.199">
+           time="4.348">
     <properties></properties>
 
 
 
             <testcase
+                name="testCreateBookingNegative"
+                time="1.148"
+                classname="com.thetestingacademy.tests.crud.testCreateBookingPOST">
+            </testcase>
+            <testcase
                 name="testCreateBooking"
-                time="3.199"
+                time="3.200"
                 classname="com.thetestingacademy.tests.crud.testCreateBookingPOST">
             </testcase>
 </testsuite>

@@ -37,7 +37,28 @@ public class testCreateBookingPOST extends BaseTest {
         assertThat(bookingResponse.getBooking().getFirstname()).isEqualTo("Naina");
 
         //TestNG Assertions
-        assertActions.verifyStatusCode(response);
+        assertActions.verifyStatusCode(response, 200);
+    }
+
+    @Test(groups = "smoke")
+    @Owner("Swapnil")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("TC#1 - Verify that the booking can be created")
+    public void  testCreateBookingNegative(){
+
+        requestSpecification.basePath(APIConstants.CREATE_UPDATE_BOOKING_URL);
+        response = RestAssured.given(requestSpecification)
+                .when().body(payloadManager.createInvalidPayloadBookingAsString()).post();
+
+        //Validatable Assertion
+        validatableResponse = response.then().log().all();
+        validatableResponse.statusCode(500);
+
 
     }
+
+
+
+
+
 }

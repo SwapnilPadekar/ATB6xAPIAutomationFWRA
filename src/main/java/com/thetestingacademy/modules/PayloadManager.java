@@ -32,6 +32,10 @@ public class PayloadManager {
         return gson.toJson(booking);
     }
 
+    public String createInvalidPayloadBookingAsString(){
+        return "{}";
+    }
+
     public String fullUpdatePayloadAsString(){
 
         Booking booking = new Booking(); // Booking class

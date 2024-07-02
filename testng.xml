@@ -5,9 +5,9 @@
         <classes>
 
             <class name="com.thetestingacademy.tests.crud.testCreateBookingPOST">
-                <methods>
-                    <include name="testCreateBooking"/>
-                </methods>
+<!--                <methods>-->
+<!--                    <include name="testCreateBooking"/>-->
+<!--                </methods>-->
             </class>
         </classes>
     </test>
