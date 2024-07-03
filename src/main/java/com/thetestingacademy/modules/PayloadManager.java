@@ -2,60 +2,81 @@ package com.thetestingacademy.modules;
 
 import com.github.javafaker.Faker;
 import com.google.gson.Gson;
-import com.thetestingacademy.pojos.Booking;
-import com.thetestingacademy.pojos.BookingDates;
-import com.thetestingacademy.pojos.BookingResponse;
+import com.thetestingacademy.pojos.*;
 
 public class PayloadManager {
 
-    Faker faker = new Faker();
-    Gson gson = new Gson();
+    Gson gson;
 
-    public String createPayloadBookingAsString(){
-
-        Booking booking = new Booking(); // Booking class
-
-//        booking.setFirstname(faker.name().firstName());
-//        booking.setLastname(faker.name().lastName());
-
-        booking.setFirstname("Naina");
+    public String createPayloadBookingAsString() {
+        Booking booking = new Booking();
+        Faker faker = new Faker();
+        booking.setFirstname("Pramod");
         booking.setLastname(faker.name().lastName());
-        booking.setTotalprice(faker.random().nextInt(987));
+        booking.setTotalprice(faker.random().nextInt(1000));
         booking.setDepositpaid(true);
 
-        BookingDates bookingdates = new BookingDates(); // BookingDates class
+        BookingDates bookingdates = new BookingDates();
         bookingdates.setCheckin("2024-02-01");
-        bookingdates.setCheckout("2024-02-15");
+        bookingdates.setCheckout("2024-02-05");
         booking.setBookingdates(bookingdates);
-        booking.setAdditionalneeds("Breakfast, Lunch, Snacks");
-
-        return gson.toJson(booking);
+        booking.setAdditionalneeds("Breakfast");
+        gson = new Gson();
+        String jsonPayload = gson.toJson(booking);
+        return jsonPayload;
     }
 
-    public String createInvalidPayloadBookingAsString(){
+    public String createInvalidPayloadBookingAsString() {
         return "{}";
     }
-
-    public String fullUpdatePayloadAsString(){
-
-        Booking booking = new Booking(); // Booking class
-        booking.setFirstname("Shweta");
-        booking.setLastname(faker.name().lastName());
-        booking.setTotalprice(faker.random().nextInt(789));
+    public String fullUpdatePayloadAsString() {
+        Booking booking = new Booking();
+        booking.setFirstname("James");
+        booking.setLastname("Dutta");
+        booking.setTotalprice(112);
         booking.setDepositpaid(true);
 
-        BookingDates bookingdates = new BookingDates(); // BookingDates class
-        bookingdates.setCheckin("2024-02-14");
-        bookingdates.setCheckout("2024-02-20");
+        BookingDates bookingdates = new BookingDates();
+        bookingdates.setCheckin("2024-02-01");
+        bookingdates.setCheckout("2024-02-05");
         booking.setBookingdates(bookingdates);
-        booking.setAdditionalneeds("Breakfast, Lunch, Snacks");
-
+        booking.setAdditionalneeds("Breakfast");
         return gson.toJson(booking);
     }
 
     public BookingResponse bookingResponseJava(String responseString){
-        BookingResponse bookingResponse = gson.fromJson(responseString, BookingResponse.class);
-                return bookingResponse;
+        gson = new Gson();
+        BookingResponse bookingRespons = gson.fromJson(responseString,BookingResponse.class);
+        return bookingRespons;
     }
+
+    public String setAuthPayload(){
+        Auth auth = new Auth();
+        auth.setUsername("admin");
+        auth.setPassword("password123");
+        gson = new Gson();
+        String jsonPayloadString = gson.toJson(auth);
+        System.out.println(" Payload set to "+ jsonPayloadString);
+        return jsonPayloadString;
+    }
+
+    public String getTokenFromJSON(String tokenResponse){
+        gson = new Gson();
+        // Response ( JSON) ->  Object TokenResponse
+        // Deserialization
+        TokenResponse tokenResponse1 = gson.fromJson(tokenResponse,TokenResponse.class);
+        return tokenResponse1.getToken();
+    }
+
+    public Booking getResponseFromJSON(String getResponse){
+        gson = new Gson();
+        // Response ( JSON) ->  Object TokenResponse
+        // Deserialization
+        Booking booking = gson.fromJson(getResponse,Booking.class);
+        return booking;
+    }
+
+
+
 
 }

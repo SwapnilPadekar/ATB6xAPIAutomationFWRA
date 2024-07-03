@@ -6,12 +6,13 @@ public class FakerUtil {
 
     Faker faker = new Faker();
 
-    public String getFirstName(){
+
+    public String getFirstName() {
         return faker.name().firstName();
     }
 
-    public String getLastName(){
+    public String getLastName() {
+
         return faker.name().lastName();
     }
-
 }
