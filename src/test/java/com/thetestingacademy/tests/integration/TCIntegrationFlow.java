@@ -39,11 +39,10 @@ public class TCIntegrationFlow extends BaseTest {
 
         // Validatable Assertion
         validatableResponse.statusCode(200);
-        // validatableResponse.body("booking.firstname", Matchers.equalTo("Pramod"));
+//        validatableResponse.body("booking.firstname", Matchers.equalTo("Pramod"));
 
         // DeSer
         BookingResponse bookingResponse = payloadManager.bookingResponseJava(response.asString());
-
         // AssertJ
         assertThat(bookingResponse.getBookingid()).isNotNull();
         assertThat(bookingResponse.getBooking().getFirstname()).isNotNull().isNotBlank();
@@ -73,8 +72,10 @@ public class TCIntegrationFlow extends BaseTest {
         validatableResponse.statusCode(200);
 
         Booking booking = payloadManager.getResponseFromJSON(response.asString());
+
         assertThat(booking.getFirstname()).isNotNull().isNotBlank();
         assertThat(booking.getFirstname()).isEqualTo(PropertyReader.readKey("booking.firstname"));
+
 
     }
 
