@@ -4,12 +4,12 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="8.064">
+           time="7.527">
     <properties></properties>
 
             <testcase
                 name="testDeleteBookingById"
-                time="1.349"
+                time="1.100"
                 classname="com.thetestingacademy.tests.extentTest.TCIntegrationFlowExtent">
 
             <failure type="java.lang.AssertionError" message="1 expectation failed.
@@ -25,18 +25,18 @@ Expected status code <200> but was <201>.
 
 
             <testcase
-                name="testUpdateBookingByID"
-                time="1.409"
-                classname="com.thetestingacademy.tests.extentTest.TCIntegrationFlowExtent">
-            </testcase>
-            <testcase
                 name="testVerifyBookingId"
-                time="1.420"
+                time="1.138"
                 classname="com.thetestingacademy.tests.extentTest.TCIntegrationFlowExtent">
             </testcase>
             <testcase
                 name="testCreateBooking"
-                time="3.886"
+                time="4.166"
+                classname="com.thetestingacademy.tests.extentTest.TCIntegrationFlowExtent">
+            </testcase>
+            <testcase
+                name="testUpdateBookingByID"
+                time="1.123"
                 classname="com.thetestingacademy.tests.extentTest.TCIntegrationFlowExtent">
             </testcase>
 </testsuite>

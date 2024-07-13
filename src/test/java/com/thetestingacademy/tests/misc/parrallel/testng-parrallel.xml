@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
+<suite name="All Test Suite" parallel="true" thread-count="2">
     <test verbose="2" preserve-order="true" name="APIAutomationATB6x1">
         <classes>
             <class name="com.thetestingacademy.tests.misc.parrallel.MainClass">
@@ -10,10 +10,13 @@
 
     <test verbose="2" preserve-order="true" name="APIAutomationATB6x2">
         <classes>
-            <class name="com.thetestingacademy.tests.misc.parrallel.MainClass">
+            <class name="com.thetestingacademy.tests.misc.parrallel.MainClass2">
             </class>
         </classes>
     </test>
 
 
 </suite>
+
+
+<!--If the tests are dependant then those cannot be run parallel.-->

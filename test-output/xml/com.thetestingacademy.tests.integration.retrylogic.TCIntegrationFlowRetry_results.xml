@@ -4,12 +4,12 @@
            failures="1"
            errors="0"
            skipped="3"
-           time="11.807">
+           time="10.561">
     <properties></properties>
 
             <testcase
                 name="testDeleteBookingById"
-                time="1.352"
+                time="1.087"
                 classname="com.thetestingacademy.tests.integration.retrylogic.TCIntegrationFlowRetry">
 
             <failure type="java.lang.AssertionError" message="1 expectation failed.
@@ -41,17 +41,17 @@ Expected status code <200> but was <405>.
 
             <testcase
                 name="testVerifyBookingId"
-                time="1.421"
-                classname="com.thetestingacademy.tests.integration.retrylogic.TCIntegrationFlowRetry">
-            </testcase>
-            <testcase
-                name="testCreateBooking"
-                time="3.513"
+                time="1.069"
                 classname="com.thetestingacademy.tests.integration.retrylogic.TCIntegrationFlowRetry">
             </testcase>
             <testcase
                 name="testUpdateBookingByID"
-                time="1.401"
+                time="1.098"
+                classname="com.thetestingacademy.tests.integration.retrylogic.TCIntegrationFlowRetry">
+            </testcase>
+            <testcase
+                name="testCreateBooking"
+                time="4.067"
                 classname="com.thetestingacademy.tests.integration.retrylogic.TCIntegrationFlowRetry">
             </testcase>
 </testsuite>

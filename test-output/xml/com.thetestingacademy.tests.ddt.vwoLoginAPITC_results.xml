@@ -4,19 +4,19 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="1.595">
+           time="3.406">
     <properties></properties>
 
 
 
             <testcase
                 name="testVWOLogin"
-                time="1.083"
+                time="2.875"
                 classname="com.thetestingacademy.tests.ddt.vwoLoginAPITC">
             </testcase>
             <testcase
                 name="testVWOLogin"
-                time="0.512"
+                time="0.531"
                 classname="com.thetestingacademy.tests.ddt.vwoLoginAPITC">
             </testcase>
 </testsuite>

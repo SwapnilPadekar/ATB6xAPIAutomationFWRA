@@ -4,39 +4,39 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.004">
+           time="0.052">
     <properties></properties>
 
 
 
             <testcase
-                name="testMethodsMC2"
-                time="0.001"
+                name="testMethodsMC3"
+                time="0.009"
                 classname="com.thetestingacademy.tests.misc.parrallel.MainClass2">
             </testcase>
             <testcase
                 name="testMethodsMC6"
-                time="0.001"
+                time="0.006"
                 classname="com.thetestingacademy.tests.misc.parrallel.MainClass2">
             </testcase>
             <testcase
                 name="testMethodsMCO5"
-                time="0.001"
+                time="0.005"
+                classname="com.thetestingacademy.tests.misc.parrallel.MainClass2">
+            </testcase>
+            <testcase
+                name="testMethodsMC2"
+                time="0.008"
                 classname="com.thetestingacademy.tests.misc.parrallel.MainClass2">
             </testcase>
             <testcase
                 name="testMethodsMC1"
-                time="0.001"
+                time="0.005"
                 classname="com.thetestingacademy.tests.misc.parrallel.MainClass2">
             </testcase>
             <testcase
                 name="testMethodsMC4"
-                time="0.000"
-                classname="com.thetestingacademy.tests.misc.parrallel.MainClass2">
-            </testcase>
-            <testcase
-                name="testMethodsMC3"
-                time="0.000"
+                time="0.019"
                 classname="com.thetestingacademy.tests.misc.parrallel.MainClass2">
             </testcase>
 </testsuite>

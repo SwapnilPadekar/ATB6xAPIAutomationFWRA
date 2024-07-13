@@ -21,8 +21,8 @@ public class ExtentManager {
 
             extent = new ExtentReports();
             extent.attachReporter(htmlReporter);
-            extent.setSystemInfo("OS", "Mac");
-            extent.setSystemInfo("Tester", "PROMODE");
+            extent.setSystemInfo("OS", "Windows");
+            extent.setSystemInfo("Tester", "Swapnil");
 
         }
         return extent;

@@ -20,11 +20,11 @@ public class vwoLoginAPITC {
 
     @Test(dataProvider = "getData",dataProviderClass = UtilsExcel.class)
     public void testVWOLogin(String email,String password){
-        System.out.println(" -- Login API Testing");
+        System.out.println(" -- Login API Testing -- ");
         System.out.println(email);
         System.out.println(password);
 
-        // Payload
+        //From PayloadManager
         VWOLoginPOJO vwoLoginPOJO = new VWOLoginPOJO();
         vwoLoginPOJO.setUsername(email);
         vwoLoginPOJO.setPassword(password);
@@ -35,7 +35,7 @@ public class vwoLoginAPITC {
         String payload = gson.toJson(vwoLoginPOJO);
 
 
-        //
+        //From BaseTest
         r2= RestAssured.given();
         r2.baseUri("https://app.vwo.com");
         r2.basePath("/login");

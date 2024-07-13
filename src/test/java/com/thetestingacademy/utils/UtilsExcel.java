@@ -4,7 +4,6 @@ package com.thetestingacademy.utils;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
 
 import java.io.FileInputStream;
@@ -33,12 +32,15 @@ public class UtilsExcel {
             e.printStackTrace();
         }
         try {
-            book = WorkbookFactory.create(file);
+            book = WorkbookFactory.create(file); //Read this file
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
         sheet = book.getSheet(sheetName);
+
+//        totalRowCount = sheet.getLastRowNum(); //3
+//        totalColCount = sheet.getRow(0).getLastCellNum(); //2
         Object[][] data = new Object[sheet.getLastRowNum()][sheet.getRow(0).getLastCellNum()];
         for (int i = 0; i < sheet.getLastRowNum(); i++) {
             for (int j = 0; j < sheet.getRow(0).getLastCellNum(); j++) {
@@ -53,8 +55,8 @@ public class UtilsExcel {
         // In Future I can write logic to select which sheet I want to open.
         // Ask user which sheet to open
         // Data.propeties -> sheet1 or sheet2
-        // Sheet1 - u/ p - QA
-        // Sheet2 -> u/ p - Prod
+        // Sheet1 -> username/password - QA Envt.
+        // Sheet2 -> username/password - Prod Envt.
         return getTestData("Sheet1");
     }
 

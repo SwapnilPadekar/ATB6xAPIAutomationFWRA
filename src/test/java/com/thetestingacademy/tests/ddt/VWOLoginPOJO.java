@@ -6,12 +6,15 @@ public class VWOLoginPOJO {
     @SerializedName("username")
     @Expose
     private String username;
+
     @SerializedName("password")
     @Expose
     private String password;
+
     @SerializedName("remember")
     @Expose
     private Boolean remember;
+
     @SerializedName("recaptcha_response_field")
     @Expose
     private String recaptchaResponseField;
